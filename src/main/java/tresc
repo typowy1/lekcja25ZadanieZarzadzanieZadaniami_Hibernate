@@ -1,0 +1,32 @@
+
+Treść zadania
+
+Stwórz aplikację internetową do zarządzania zadaniami.
+
+Podstawowe funkcjonalności:
+
+    wyświetlanie listy zadań które są jeszcze do zrobienia
+    oznaczanie zadania jako gotowego
+    dodawanie nowego zadania
+    wyświetlanie listy zadań już zrealizowanych (archiwum)
+
+Zadania powinny być zapisywane w bazie danych. Do zapisywania należy użyć Spring Data.
+
+Dodatkowe funkcjonalności:
+
+    zadanie może mieć termin do kiedy powinno być wykonane, zadania po terminie wyświetlane w innym kolorze
+    zadania z najbliższym terminem powinny być wyświetlane jako pierwsze
+    możliwość edycji zadań
+    możliwość dodawania informacji ile czasu zajęło dane zadanie i kiedy zostało ukończone
+    kategorie zadań (np. obowiązki domowe, praca, szkolenie, etc.)
+
+Punktacja:
+
+    wyświetlanie listy zadań do zrobienia i dodawanie zadań - 1 pkt
+    odznaczanie gotowego zadania - 1 pkt
+    wyświetlanie archiwum - 1 pkt
+    dwie dodatkowe funkcjonalności (wybrane przez siebie z listy powyżej) - 2 pkt
+    szata graficzna - 1 pkt
+
+
+pierw ustaw - propierties

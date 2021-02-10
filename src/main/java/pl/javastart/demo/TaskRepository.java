@@ -19,15 +19,18 @@ public class TaskRepository {
         entityManager = entityManagerFactory.createEntityManager();
     }
 
-    //wyświetlanie listy zadań które są jeszcze do zrobienia
+    //wyświetlanie listy zadań które są jeszcze do zrobienia i
+//    zadania z najbliższym terminem powinny być wyświetlane jako pierwsze
     public List<Task> findNotDone() {
-        TypedQuery<Task> query = entityManager.createQuery("SELECT t FROM Task t WHERE t.isDone = false", Task.class);
+        TypedQuery<Task> query = entityManager.createQuery("SELECT t FROM Task t WHERE t.isDone = false " +
+                "ORDER BY t.dueDate ASC", Task.class);
 //        List<Task> resultList = query.getResultList();
         return query.getResultList();
     }
 
     public List<Task> findDone() {
-        TypedQuery<Task> query = entityManager.createQuery("SELECT t FROM Task t WHERE t.isDone = true", Task.class);
+        TypedQuery<Task> query = entityManager.createQuery("SELECT t FROM Task t WHERE t.isDone = true " +
+                "ORDER BY t.dueDate ASC", Task.class);
 //        List<Task> resultList = query.getResultList();
         return query.getResultList();
     }

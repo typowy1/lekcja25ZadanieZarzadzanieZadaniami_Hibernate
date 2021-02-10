@@ -3,6 +3,7 @@ package pl.javastart.demo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -25,6 +26,7 @@ public class HomeController {
         List<Task> tasksDone = taskRepository.findDone(); //pobieramy zadan z repo
         model.addAttribute("tasks", tasks); //pobieramy zadania
         model.addAttribute("tasksDone", tasksDone); //wyświetlanie listy zadań już zrealizowanych (archiwum)
+        model.addAttribute("newTask", new Task()); //dodawanie nowego zadania
         return "home";
     }
 
@@ -40,4 +42,9 @@ public class HomeController {
         return "redirect:/";
     }
 
+    @PostMapping("/add")
+    public String add(Task task) {
+        taskRepository.save(task);
+        return "redirect:/";
+    }
 }

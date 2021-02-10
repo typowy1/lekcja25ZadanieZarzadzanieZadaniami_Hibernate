@@ -10,7 +10,7 @@ Podstawowe funkcjonalności:
     dodawanie nowego zadania
     wyświetlanie listy zadań już zrealizowanych (archiwum)
 
-Zadania powinny być zapisywane w bazie danych. Do zapisywania należy użyć Spring Data.
+Zadania powinny być zapisywane w bazie danych. Do zapisywania należy użyć Spring Data, użyty hibernate.
 
 Dodatkowe funkcjonalności:
 
